@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "609488497310",
+    "firebase_url": "https://our-time-382aa-default-rtdb.firebaseio.com",
+    "project_id": "our-time-382aa",
+    "storage_bucket": "our-time-382aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609488497310:android:e98005491762601e4ba98f",
+        "android_client_info": {
+          "package_name": "com.example.calendar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609488497310-j3cbpemekhon0c0l41sthfmrk5g08j4c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqMrMnsCgadtO-QmXmk88BsawxGu3gJX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609488497310-j3cbpemekhon0c0l41sthfmrk5g08j4c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

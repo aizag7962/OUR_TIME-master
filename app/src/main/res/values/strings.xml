@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Our Time</string>
+    <string name="back"><![CDATA[◄]]></string>
+    <string name="forward"><![CDATA[►]]></string>
+    <string name="action_schedule">Schedule</string>
+    <string name="action_chat">Chat</string>
+    <string name="action_contacts">Contacts</string>
+    <string name="action_home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
