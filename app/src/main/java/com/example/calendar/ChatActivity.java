@@ -7,12 +7,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +27,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import java.util.HashMap;
 
 
 public class ChatActivity extends AppCompatActivity {
@@ -82,7 +89,20 @@ public class ChatActivity extends AppCompatActivity {
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     //get data
                     String name = "" + ds.child("name").getValue();
-                    String image = "" + ds.child("name").getValue();
+                    String image = "" + ds.child("image").getValue();
+
+                    //set data
+                    nameTv.setText(name);
+                    try {
+                        //image received, set it to imageview in toolbar
+                        Picasso.get().load(image).placeholder(R.drawable.ic_default_foreground).into(profileIv);
+
+                    }
+                    catch (Exception e) {
+                        //there is exception getting the picture, set default picture
+                        Picasso.get().load(R.drawable.ic_default_foreground).into(profileIv);
+                    }
+
                 }
             }
 
@@ -90,6 +110,24 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+
+        //click button to send message
+        sendBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //get text from edit text
+                String message = messageEt.getText().toString().trim();
+                //check if text is empty
+                if (TextUtils.isEmpty(message)) {
+                    //text empty
+                    Toast.makeText(ChatActivity.this, "Cannot send the empty message...", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    //text not empty
+                    sendMessage(message);
+                }
             }
         });
 
@@ -121,7 +159,27 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
-        private void checkUserStatus() {
+    private void sendMessage(String message) {
+        //"Chats node will be created that contain all chats
+        // Whenever user sends message it will create new child in "Chats" node and that child will contain
+        //the following key values
+        //sender: UID of sender
+        //Receiver: UID of receiver
+        //message: the actual message
+
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("sender", myUid);
+        hashMap.put("receiver", hisUid);
+        hashMap.put("message", message);
+        databaseReference.child("Chats").push().setValue(hashMap);
+
+        //reset edittext after sending message
+        messageEt.setText(" ");
+    }
+
+    private void checkUserStatus() {
             //get current user
             FirebaseUser user = firebaseAuth.getCurrentUser();
             if (user != null) {
@@ -134,6 +192,13 @@ public class ChatActivity extends AppCompatActivity {
             }
 
         }
+
+        @Override
+        protected void onStart() {
+        checkUserStatus();
+        super.onStart();
+        }
+
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {
             getMenuInflater().inflate(R.menu.home_menu, menu);
