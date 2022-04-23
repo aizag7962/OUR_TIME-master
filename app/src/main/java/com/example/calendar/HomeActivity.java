@@ -36,7 +36,7 @@ import java.util.Locale;
 public class HomeActivity extends AppCompatActivity {
 
 
-    private Menu Menu;
+    private Menu mMenu;
 
     FirebaseAuth firebaseAuth;
     RecyclerView recyclerView;
