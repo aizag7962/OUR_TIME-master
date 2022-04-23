@@ -38,11 +38,11 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //Action bar and its title
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Create Account");
+        //ActionBar actionBar = getSupportActionBar();
+        //actionBar.setTitle("Create Account");
         //enable back button
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(true);
+        //actionBar.setDisplayHomeAsUpEnabled(true);
+        //actionBar.setDisplayShowHomeEnabled(true);
 
         //initialize
         mEmailEt = findViewById(R.id.emailEt);
@@ -94,6 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
                             // Sign in success, dismiss dialog and start register activity
                             progressDialog.dismiss();
                             FirebaseUser user = mAuth.getCurrentUser();
+                            assert user != null;
                             Toast.makeText(RegisterActivity.this, "Registered...\n" + user.getEmail(), Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
 

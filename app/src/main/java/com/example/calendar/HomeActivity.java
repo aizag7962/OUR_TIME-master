@@ -36,7 +36,7 @@ import java.util.Locale;
 public class HomeActivity extends AppCompatActivity {
 
 
-    private Menu mMenu;
+    private Menu Menu;
 
     FirebaseAuth firebaseAuth;
     RecyclerView recyclerView;
@@ -143,6 +143,7 @@ public class HomeActivity extends AppCompatActivity {
                     ModelPost modelPost = ds.getValue(ModelPost.class);
 
 
+                    assert modelPost != null;
                     if(modelPost.getpTitle().toLowerCase().contains(searchQuery.toLowerCase()) ||
                             modelPost.getpDescription().toLowerCase().contains(searchQuery.toLowerCase())){
                         postList.add(modelPost);

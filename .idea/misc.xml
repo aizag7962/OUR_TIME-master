@@ -11,7 +11,7 @@
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/activity_daily_calendar.xml" value="0.358695652173913" />
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/activity_event_edit.xml" value="0.358695652173913" />
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/activity_first_screen.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/activity_home.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/activity_register.xml" value="0.1" />
@@ -19,6 +19,8 @@
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/calendar_cell.xml" value="0.358695652173913" />
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/event_cell.xml" value="0.358695652173913" />
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/fragment_chat_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/row_chat_left.xml" value="0.33" />
+        <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/layout/row_chat_right.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/menu/app_bar_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/aleja/AndroidStudioProjects/OUR_TIME-master/app/src/main/res/menu/home_menu.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/jenif/AndroidStudioProjects/Calendar/app/src/main/res/drawable-v24/ic_calendar_24.xml" value="0.146" />

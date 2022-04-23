@@ -31,18 +31,18 @@ public class LoginActivity extends AppCompatActivity {
 
     //progress dialog
     ProgressDialog pd;
-
+    @NonNull
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         //Action bar and its title
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Login");
+        //ActionBar actionBar = getSupportActionBar();
+        //actionBar.setTitle("Login");
         //enable back button
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(true);
+        //actionBar.setDisplayHomeAsUpEnabled(true);
+        //actionBar.setDisplayShowHomeEnabled(true);
 
         //init FirebaseAuth
         mAuth = FirebaseAuth.getInstance();

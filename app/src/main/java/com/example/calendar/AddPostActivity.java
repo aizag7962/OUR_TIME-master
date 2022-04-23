@@ -85,6 +85,7 @@ public class AddPostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_post);
 
         actionBar = getSupportActionBar();
+        assert actionBar != null;
         actionBar.setTitle("Add New Post");
         //enable back button in action bar
         actionBar.setDisplayShowHomeEnabled(true);
@@ -461,7 +462,8 @@ public class AddPostActivity extends AppCompatActivity {
         if(resultCode == RESULT_OK) {
             if (requestCode == IMAGE_PICK_GALLERY_CODE) {
                 //image is picked from gallery, get uri of image
-            image_rui = data.getData();
+                assert data != null;
+                image_rui = data.getData();
 
             //set to imageview
                 imageIv.setImageURI(image_rui);

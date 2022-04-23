@@ -69,7 +69,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
 
         //set user dp
         try {
-          //  Picasso.with(context).load(uDp).placeholder(R.drawable.ic_baseline_face_24).into(myHolder.PictureIv);
+            Picasso.get().load(uDp).placeholder(R.drawable.ic_baseline_face_24).into(myHolder.PictureIv);
         }
         catch (Exception e) {
 
@@ -82,7 +82,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
         }
         else {
             try {
-               // Picasso.with(context).load(pImage).into(myHolder.ImageIv);
+                Picasso.get().load(pImage).into(myHolder.ImageIv);
             }
             catch (Exception e) {
 
